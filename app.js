@@ -1,4 +1,3 @@
-// Switch between pages
 function goToApp() {
     document.getElementById('landingPage').classList.remove('active');
     document.getElementById('landingPage').classList.add('hidden');
