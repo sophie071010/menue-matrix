@@ -1,4 +1,4 @@
-const apiKey = 'AQ.Ab8RN6KanbOk5Qjls92H4mtVAn6J8yXfobrMGGG4ex0N6y0siA'; // Replace this with your Gemini API key
+const iKey = 'AQ.Ab8RN6KVuxAH4HMQjpg-oOsOqPXp9yOVugGtWygtCp6w_xqvDA'; // Replace this with your Gemini I key
 
 async function getMealSuggestion() {
     const userPrompt = document.getElementById('userInput').value;
@@ -12,9 +12,9 @@ async function getMealSuggestion() {
     resultDiv.innerText = 'Thinking of the perfect meal...';
 
     try {
-        const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${apiKey}`, {
+        const response = await fetch(`https://generativelanguage.googleis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${iKey}`, {
             method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
+            headers: { 'Content-Type': 'plication/json' },
             body: JSON.stringify({
                 contents: [{ parts: [{ text: `Suggest a single specific meal idea for an indecisive person based on these notes: ${userPrompt}. Include a 2-sentence description and why it fits.` }] }]
             })
@@ -24,6 +24,6 @@ async function getMealSuggestion() {
         const suggestion = data.candidates[0].content.parts[0].text;
         resultDiv.innerText = suggestion;
     } catch (error) {
-        resultDiv.innerText = 'Error generating suggestion. Check your API key!';
+        resultDiv.innerText = 'Error generating suggestion. Check your I key!';
     }
 }
