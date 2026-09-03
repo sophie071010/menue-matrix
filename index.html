@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Matrix</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 600px; margin: 40px auto; padding: 20px; line-height: 1.6; }
+        h1 { color: #333; }
+        input, button { padding: 10px; margin-top: 10px; width: 100%; box-sizing: border-box; }
+        button { background-color: #0070f3; color: white; border: none; cursor: pointer; font-weight: bold; }
+        #result { margin-top: 20px; padding: 15px; background: #f4f4f4; border-radius: 5px; }
+    </style>
+</head>
+<body>
+    <h1>Menu Matrix 🍽️</h1>
+    <p>Can't decide what to eat? Tell me what you're craving or your dietary constraints!</p>
+    
+    <input type="text" id="userInput" placeholder="e.g., Vegetarian, feeling lazy, want something spicy">
+    <button onclick="getMealSuggestion()">Decide My Meal</button>
+
+    <div id="result">Your suggestion will appear here...</div>
+
+    <script src="app.js"></script>
+</body>
+</html>
