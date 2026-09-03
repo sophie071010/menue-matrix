@@ -34,7 +34,7 @@ async function getMealSuggestion() {
   const resultDiv = document.getElementById('result');
 
   if (!userInput) {
-    resultDiv.innerText = 'Please enter a request first!';
+    resultDiv.innerText = 'Please enter a request first!'; 
     return;
   }
 
@@ -42,12 +42,11 @@ async function getMealSuggestion() {
 
   try {
     const response = await fetch(
-      'https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent',
+      'https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=AQ.Ab8RN6JMSfYRZFFLmincWOQRoSwSxKkr_pshmehRYSFDvAaSKw',
       {
         method: 'POST',
         headers: { 
-          'Content-Type': 'application/json',
-          'x-goog-api-key': 'AQ.Ab8RN6Lhzo2HxK0UeXoj8UlhiOaXCpqe7-7za--63STTmZHSqA'
+          'Content-Type': 'application/json'
         },
         body: JSON.stringify({
           contents: [{ parts: [{ text: "You are an expert chef assistant. Provide a creative meal recommendation for: " + userInput }] }]
